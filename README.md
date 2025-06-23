@@ -13,10 +13,7 @@
 
 ## 📖 About
 
-Hey There! 👋 I am Yash
-I am a Full-Stack Web Developer from India.
-
-Currently I am Working on **Collabrative Code Editor**.
+Hey there! 👋 I'm Yash, a Full-Stack Web Developer from India.
 
 ---
 
