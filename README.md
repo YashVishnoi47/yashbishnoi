@@ -14,7 +14,6 @@
 ## 📖 About
 
 Hey there! 👋 I'm Yash, a Full-Stack Web Developer from India.  
-I specialize in building responsive, interactive, and performance-driven web applications using modern tech like Next.js, React, and Tailwind CSS.
 
 ---
 
@@ -22,8 +21,8 @@ I specialize in building responsive, interactive, and performance-driven web app
 
 Feel free to reach out or connect with me:
 
-- 📸 [Instagram](https://instagram.com/yashss.realm)
-- 🐦 [Twitter / X](https://x.com/Yash_Vishnoi7)
+[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://instagram.com/yashss.realm)
+[![X](https://img.shields.io/badge/X-%23000000.svg?style=for-the-badge&logo=X&logoColor=white)](https://x.com/Yash_Vishnoi7)
 
 ---
 
