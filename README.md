@@ -1,67 +1,59 @@
-# 🚀 Personal Portfolio
+# 👨‍💻 Yash's Developer Portfolio
 
-> A modern, responsive, and animated developer portfolio built with **Next.js**, **React**, and **Framer Motion** — designed to showcase skills, projects, and social presence.
+> A sleek, responsive, and animated personal portfolio built with **Next.js**, **React**, and **Framer Motion** — showcasing my work, skills, and personality as a full-stack developer.
 
 ---
 
-![Portfolio Demo](./public/preview.gif)
+![Portfolio Preview](./public/preview.gif) <!-- Replace with actual path or external link -->
 
-## 📌 Table of Contents
-
-- [About](#about)
-- [Tech Stack](#tech-stack)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Folder Structure](#folder-structure)
-- [Customization](#customization)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
+[![Live Site](https://img.shields.io/badge/Live%20Site-Visit-green?style=for-the-badge&logo=vercel)](https://your-live-link.vercel.app)
+[![GitHub](https://img.shields.io/badge/GitHub-Repo-181717?style=for-the-badge&logo=github)](https://github.com/your-username/your-portfolio)
+[![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](./LICENSE)
 
 ---
 
 ## 📖 About
 
-This portfolio website is crafted to help developers and freelancers present their work in a minimal, clean, and interactive way — inspired by desktop UI with animated transitions and smooth user experience.
+Welcome to my digital space!  
+This portfolio reflects my journey as a **Full-Stack Web Developer** passionate about building creative and scalable web applications.
+
+Designed to resemble a **desktop UI**, this site features smooth **Framer Motion animations**, modern layouts, and responsive components.
 
 ---
 
-## 🛠️ Tech Stack
+## 🚀 Tech Stack
 
-- **Next.js** – Server-side rendering and routing
-- **React** – Component-based UI
-- **Tailwind CSS** – Utility-first styling
-- **Framer Motion** – Animations and transitions
-- **TypeScript** – (Optional if you use it)
-- **Vercel** – Deployment
+- **Framework**: [Next.js](https://nextjs.org/)
+- **UI Library**: [React](https://react.dev/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Hosting**: [Vercel](https://vercel.com/)
 
 ---
 
 ## ✨ Features
 
-- 🎯 Minimal & clean layout
-- 🌙 Light / dark theme ready
-- 💻 Responsive design
-- 📂 Projects showcase with animations
-- 🌐 Social links integration
-- 🧠 Dynamic content loading
-- 🎞️ Framer Motion animations
-- 🌍 SEO optimized (Meta tags)
+- 💻 Fully responsive layout
+- 🌗 Dark/light theme support
+- 🎬 Smooth animations with Framer Motion
+- 📂 Project showcase with preview cards
+- 🧾 Resume/Download option (optional)
+- 🔗 Social links integration
+- 🗂️ Multi-language support (optional)
 
 ---
 
 ## 📦 Installation
 
 ```bash
-# Clone the repository
+# Clone the repo
 git clone https://github.com/your-username/your-portfolio.git
 
-# Navigate to the project directory
+# Go into the project directory
 cd your-portfolio
 
 # Install dependencies
 npm install
 
-# Run the development server
+# Start local server
 npm run dev
