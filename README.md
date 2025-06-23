@@ -1,4 +1,4 @@
-# 👨‍💻 Yash's Developer Portfolio
+# 👨‍💻 Yash's Portfolio
 
 > A sleek, responsive, and animated personal portfolio built with **Next.js**, **React**, and **Framer Motion** — showcasing my work, skills, and personality as a full-stack developer.
 
