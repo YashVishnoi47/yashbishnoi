@@ -1,9 +1,15 @@
 "use client";
 import React, { useState } from "react";
 import Introduction from "./Introduction";
+import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
+
+const Project = dynamic(() => import("./projects"));
+const Tools = dynamic(() => import("./Tools"));
 
 const MainComponent = () => {
   const [theme, settheme] = useState("dark");
+  const [tab, setTab] = useState("projects");
   return (
     <div
       className={`w-full h-full flex justify-center items-center ${
@@ -12,13 +18,42 @@ const MainComponent = () => {
     >
       {/* Center Part */}
       <div
-        className={`h-full w-[40%]  flex flex-col ${
+        className={`h-full w-full md:w-[80%] lg:w-[60%] xl:w-[40%] flex flex-col items-center ${
           theme === "dark"
             ? "bg-[#0c0c04] text-white"
             : "bg-white text-[#0c0c04]"
         }`}
       >
-        <Introduction />
+        <Introduction theme={theme} />
+
+        {/* Buttons */}
+        <motion.div
+          initial={{ y: 50, opacity: 0, filter: "blur(8px)" }}
+          animate={{ y: 0, opacity: 1, filter: "blur(0px)" }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="w-full px-4 min-h-[5%] flex items-center justify-between md:mt-3 mt-10 select-none"
+        >
+          <div className="flex items-center gap-3">
+            <p
+              onClick={() => setTab("projects")}
+              className="text-base sm:text-lg px-2 cursor-pointer text-gray-300 hover:text-white transition duration-200"
+            >
+              Projects
+            </p>
+            <p
+              onClick={() => setTab("tools")}
+              className="text-base sm:text-lg px-2 cursor-pointer text-gray-300 hover:text-white transition duration-200"
+            >
+              Tools
+            </p>
+          </div>
+          <div className="hidden sm:block w-[75%] h-[1px] bg-neutral-400"></div>
+        </motion.div>
+
+        {/* Tabs */}
+        <div className="w-full flex-1 min-h-[65%] px-2 sm:px-4">
+          {tab === "projects" ? <Project /> : <Tools />}
+        </div>
       </div>
     </div>
   );

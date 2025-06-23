@@ -14,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${vt323.className} h-screen w-full antialiased`}>
+      <body className={`${vt323.className} bg-[#0C0C04] h-screen w-full antialiased`}>
         {children}
       </body>
     </html>

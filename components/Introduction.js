@@ -6,103 +6,122 @@ import { FaLocationDot, FaXTwitter } from "react-icons/fa6";
 import { SiGmail } from "react-icons/si";
 import { motion, useScroll, useSpring } from "framer-motion";
 
-const Introduction = () => {
+const Introduction = ({ theme }) => {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
     restDelta: 0.001,
   });
+
+  const socials = [
+    {
+      name: "Instagram",
+      icon: (
+        <FaInstagram className="text-neutral-400 hover:text-white transition-all duration-150 text-xl" />
+      ),
+      link: "https://www.instagram.com/yashss.realm/",
+    },
+    {
+      name: "X",
+      icon: (
+        <FaXTwitter className="text-neutral-400 hover:text-white transition-all duration-150 text-xl" />
+      ),
+      link: "https://x.com/Yash_Vishnoi7",
+    },
+    {
+      name: "Github",
+      icon: (
+        <FaGithub className="text-neutral-400 hover:text-white transition-all duration-150 text-xl" />
+      ),
+      link: "https://github.com/YashVishnoi47",
+    },
+    {
+      name: "G-Main",
+      icon: (
+        <SiGmail className="text-neutral-400 hover:text-white transition-all duration-150 text-xl" />
+      ),
+      link: "mailto:yashvishnoi309@gmail.com",
+    },
+  ];
   return (
-    <div className="w-full h-[30%] flex flex-col justify-start items-start p-4 mt-2">
+    <div className="w-full min-h-[35%] flex flex-col items-start justify-start p-4 mt-2">
       <motion.div
         style={{ scaleX }}
         className="fixed top-0 left-0 right-0 h-[1.5px] bg-yellow-500 origin-left z-50"
       />
-      {/* Avatar and Name and country  */}
+
+      {/* Avatar, Name, and Location */}
       <motion.div
         initial={{ y: 50, opacity: 0, filter: "blur(8px)" }}
         animate={{ y: 0, opacity: 1, filter: "blur(0px)" }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="w-full h-[60%] flex items-center justify-start px-4 py-3 gap-4"
+        className="w-full flex flex-col md:flex-row items-center md:items-center gap-4 px-4 py-3"
       >
         {/* Profile Image */}
         <motion.div
-          whileHover={{
-            rotateX: 10,
-            rotateY: 10,
-          }}
-          transition={{ type: "spring", stiffness: 200, damping: 15 }}
+          whileHover={{ rotateX: 10, rotateY: 10 }}
+          transition={{ type: "spring", stiffness: 400, damping: 15 }}
           style={{ perspective: 1000 }}
           className="flex-shrink-0 select-none"
         >
           <Image
-            className="w-25 h-25 rounded-full object-cover border-neutral-300 dark:border-neutral-700"
+            className="w-25 h-25 md:w-25 md:h-25 rounded-full object-cover"
             src="/profile picture.jpg"
             width={64}
             height={64}
             alt="Avatar"
           />
         </motion.div>
+
         {/* Name & Location */}
-        <div className="flex flex-col justify-center">
-          <h1 className="text-3xl font-semibold text-neutral-800 dark:text-white">
+        <div className="flex flex-col justify-center md:items-start items-center w-full">
+          <h1
+            className={`text-2xl md:text-3xl font-semibold ${
+              theme === "dark" ? "text-white" : "text-black"
+            }`}
+          >
             Yash Bishnoi
           </h1>
-          <p className="text-lg text-neutral-600 dark:text-neutral-400 flex gap-1 items-center">
-            <FaLocationDot className="text-sm" />
-            Uttar Pardesh, India
+          <p
+            className={`text-sm md:text-lg flex items-center gap-2 ${
+              theme === "dark" ? "text-neutral-400" : "text-black"
+            }`}
+          >
+            <FaLocationDot className="text-base" />
+            Uttar Pradesh, India
           </p>
         </div>
       </motion.div>
 
-      {/* About me */}
+      {/* About Me */}
       <motion.div
         initial={{ y: 50, opacity: 0, filter: "blur(8px)" }}
         animate={{ y: 0, opacity: 1, filter: "blur(0px)" }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="w-full flex flex-col items-start justify-start px-3 gap-1 rounded-xl mt-2"
+        className="w-full flex flex-col md:items-start justify-start px-3 gap-3 mt-2"
       >
-        {/* Description */}
-        <p className="text-xl text-neutral-200 ">
+        <p className="text-base md:text-xl text-neutral-200">
           <span>Full-Stack Web Developer from India. Open for work.</span>{" "}
-          Learning Python and exploring AI. Currently building {""}
-          <span className="font-medium hover:text-yellow-600 transition-all duration-200 ease-in-out underline cursor-pointer">
+          Learning Python and exploring AI. Currently building{" "}
+          <span className="font-medium underline cursor-pointer hover:text-yellow-600 transition">
             Project
           </span>
           .
         </p>
-        {/* Social Links */}
-        <div className="text-lg text-neutral-200 mt-4 flex justify-center items-center gap-[15px]">
-          <Link
-            className="cursor-pointer"
-            href={"https://www.instagram.com/yashss.realm/"}
-            target="_blank"
-          >
-            <FaInstagram className="text-neutral-400 hover:text-white transition-all duration-150 text-xl " />{" "}
-          </Link>
-          <Link
-            className="cursor-pointer"
-            href={"https://x.com/Yash_Vishnoi7"}
-            target="_blank"
-          >
-            <FaXTwitter className="text-neutral-400 hover:text-white transition-all duration-150 text-xl " />{" "}
-          </Link>
 
-          <Link
-            className="cursor-pointer"
-            href={"https://github.com/YashVishnoi47"}
-            target="_blank"
-          >
-            <FaGithub className="text-neutral-400 hover:text-white transition-all duration-150 text-xl  " />
-          </Link>
-          <Link
-            className="cursor-pointer"
-            href={"mailto:yashvishnoi309@gmail.com"}
-            target="_blank"
-          >
-            <SiGmail className="text-neutral-400 hover:text-white transition-all duration-150 text-xl  " />
-          </Link>
+        {/* Social Links */}
+        <div className="flex items-center gap-4 text-lg text-neutral-400 mt-3">
+          {socials.map((item) => (
+            <Link
+              key={item.name}
+              href={item.link}
+              target="_blank"
+              className="cursor-pointer"
+            >
+              {item.icon}
+            </Link>
+          ))}
         </div>
       </motion.div>
     </div>
