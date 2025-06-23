@@ -13,10 +13,10 @@
 
 ## 📖 About
 
-Welcome to my digital space!  
-This portfolio reflects my journey as a **Full-Stack Web Developer** passionate about building creative and scalable web applications.
+Hey There! 👋 I am Yash
+I am a Full-Stack Web Developer from India.
 
-Designed to resemble a **desktop UI**, this site features smooth **Framer Motion animations**, modern layouts, and responsive components.
+Currently I am Working on **Collabrative Code Editor**.
 
 ---
 
@@ -56,3 +56,4 @@ npm install
 
 # Start local server
 npm run dev
+```
