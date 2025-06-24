@@ -50,10 +50,10 @@ const MainComponent = () => {
                   : "text-gray-300 hover:text-white"
               }`}
             >
-              Tools
+              Expertise
             </p>
           </div>
-          <div className="hidden sm:block w-[75%] h-[1px] bg-neutral-400"></div>
+          <div className="hidden sm:block w-[70%] h-[1px] bg-neutral-400"></div>
         </motion.div>
 
         {/* Tabs */}
