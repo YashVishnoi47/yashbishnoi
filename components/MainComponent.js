@@ -34,16 +34,20 @@ const MainComponent = () => {
           <div className="flex items-center gap-3">
             <p
               onClick={() => setTab("projects")}
-              className={`text-base sm:text-lg px-2 cursor-pointer text-gray-300 hover:text-white transition duration-200 ${
-                tab === "projects" ? "text-white underline" : "text-gray-300"
+              className={`text-base sm:text-lg px-1 cursor-pointer  transition duration-200 ${
+                tab === "projects"
+                  ? "text-yellow-500 rounded-full underline"
+                  : "text-gray-300 hover:text-white"
               }`}
             >
               Projects
             </p>
             <p
               onClick={() => setTab("tools")}
-              className={`text-base sm:text-lg px-2 cursor-pointer  hover:text-white transition duration-200 ${
-                tab === "tools" ? "text-white underline" : "text-gray-300"
+              className={`text-base sm:text-lg px-1 cursor-pointer   transition duration-200 ${
+                tab === "tools"
+                  ? "text-yellow-500 rounded-full underline"
+                  : "text-gray-300 hover:text-white"
               }`}
             >
               Tools
@@ -53,8 +57,12 @@ const MainComponent = () => {
         </motion.div>
 
         {/* Tabs */}
-        <div className="w-full flex-1  min-h-[65%] px-2 sm:px-4">
+        <div className="w-full flex-1 justify-between h-[58%] px-2 sm:px-4  mt-4">
           {tab === "projects" ? <Project /> : <Tools />}
+          <div className="w-full h-[50] mt-2 select-none flex justify-between items-center px-4">
+            <p className="text-xs text-yellow-500/50">Yash Bishnoi</p>
+            <p className="text-xs text-yellow-500/50">Built with Next.js </p>
+          </div>
         </div>
       </div>
     </motion.div>

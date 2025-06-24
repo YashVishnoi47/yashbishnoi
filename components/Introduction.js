@@ -5,6 +5,11 @@ import { FaGithub, FaInstagram } from "react-icons/fa";
 import { FaLocationDot, FaXTwitter } from "react-icons/fa6";
 import { SiGmail } from "react-icons/si";
 import { motion, useScroll, useSpring } from "framer-motion";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 const Introduction = ({ theme }) => {
   const { scrollYProgress } = useScroll();
@@ -18,39 +23,34 @@ const Introduction = ({ theme }) => {
     {
       name: "Instagram",
       icon: (
-        <FaInstagram className="text-neutral-400 hover:text-white transition-all duration-150 text-xl" />
+        <FaInstagram className="text-neutral-400 hover:text-yellow-500 transition-all duration-200 text-xl" />
       ),
       link: "https://www.instagram.com/yashss.realm/",
     },
     {
       name: "X",
       icon: (
-        <FaXTwitter className="text-neutral-400 hover:text-white transition-all duration-150 text-xl" />
+        <FaXTwitter className="text-neutral-400 hover:text-yellow-500 transition-all duration-200 text-xl" />
       ),
       link: "https://x.com/Yash_Vishnoi7",
     },
     {
       name: "Github",
       icon: (
-        <FaGithub className="text-neutral-400 hover:text-white transition-all duration-150 text-xl" />
+        <FaGithub className="text-neutral-400 hover:text-yellow-500 transition-all duration-200 text-xl" />
       ),
       link: "https://github.com/YashVishnoi47",
     },
     {
-      name: "G-Main",
+      name: "G-Mail",
       icon: (
-        <SiGmail className="text-neutral-400 hover:text-white transition-all duration-150 text-xl" />
+        <SiGmail className="text-neutral-400 hover:text-yellow-500 transition-all duration-200 text-xl" />
       ),
       link: "mailto:yashvishnoi309@gmail.com",
     },
   ];
   return (
-    <div className="w-full min-h-[35%] flex flex-col items-start justify-start p-4 mt-2">
-      {/* <motion.div
-        style={{ scaleX }}
-        className="fixed top-0 left-0 right-0 h-[1.5px] bg-yellow-500 origin-left z-50"
-      /> */}
-
+    <div className="w-full min-h-[37%] flex flex-col items-start justify-start p-4 mt-2">
       {/* Avatar, Name, and Location */}
       <motion.div className="w-full flex flex-col md:flex-row items-center md:items-center gap-4 px-4 py-3">
         {/* Profile Image */}
@@ -101,16 +101,24 @@ const Introduction = ({ theme }) => {
         </p>
 
         {/* Social Links */}
-        <div className="flex items-center gap-4 text-lg text-neutral-400 md:mt-3">
+        <div className="flex items-center gap-4 text-lg text-neutral-400 md:mt-4">
           {socials.map((item) => (
-            <Link
-              key={item.name}
-              href={item.link}
-              target="_blank"
-              className="cursor-pointer"
-            >
-              {item.icon}
-            </Link>
+            <Tooltip key={item.name} delayDuration={200}>
+              <TooltipTrigger>
+                <Link
+                  href={item.link}
+                  target="_blank"
+                  className="cursor-pointer"
+                >
+                  {item.icon}
+                </Link>
+              </TooltipTrigger>
+              <TooltipContent
+                className={"text-md bg-black/20 backdrop-blur-lg w-/12"}
+              >
+                {item.name}
+              </TooltipContent>
+            </Tooltip>
           ))}
         </div>
       </motion.div>
