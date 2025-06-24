@@ -84,7 +84,7 @@ const Introduction = ({ theme }) => {
             }`}
           >
             <FaLocationDot className="text-base" />
-            Uttar Pradesh, India
+            India
           </p>
         </div>
       </motion.div>

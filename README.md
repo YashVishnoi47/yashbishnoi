@@ -6,14 +6,14 @@
 
 ![Portfolio Preview](./public/preview.gif) <!-- Replace with actual path or external link -->
 
-[![Live Site](https://img.shields.io/badge/Live%20Site-Visit-green?style=for-the-badge&logo=vercel)](https://your-live-link.vercel.app)
+[![Live Site](https://img.shields.io/badge/Live%20Site-Visit-green?style=for-the-badge&logo=vercel)](https://yashbishnoi.vercel.app/)
 [![GitHub](https://img.shields.io/badge/GitHub-Repo-181717?style=for-the-badge&logo=github)](https://github.com/your-username/your-portfolio)
 
 ---
 
 ## 📖 About
 
-Hey there! 👋 I'm Yash, a Full-Stack Web Developer from India.  
+Hey there! 👋 I'm Yash, a Full-Stack Web Developer from India.
 
 ---
 
