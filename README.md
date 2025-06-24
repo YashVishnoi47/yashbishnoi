@@ -39,12 +39,9 @@ Feel free to reach out or connect with me:
 ## ✨ Features
 
 - 💻 Fully responsive layout
-- 🌗 Dark/light theme support
 - 🎬 Smooth animations with Framer Motion
 - 📂 Project showcase with preview cards
-- 🧾 Resume/Download option (optional)
 - 🔗 Social links integration
-- 🗂️ Multi-language support (optional)
 
 ---
 
