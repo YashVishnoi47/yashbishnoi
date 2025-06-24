@@ -6,11 +6,11 @@ import Link from "next/link";
 const projects = () => {
   const projects = [
     {
-      name: "Collabrative Code Editor",
+      name: "Snipppet",
       disc: "A real-time coding platform with multi-language support, and live collaboration.",
       githubLink:
         "https://github.com/YashVishnoi47/Collabrative-code-Editor-Restart",
-      LiveLink: "https://collabrative-code-editor-restart.vercel.app/",
+      LiveLink: "https://snipppet.vercel.app/",
       tech: "Nextjs/ React/ Framer-Motion/ Next-Auth/ Tailwind CSS/ Shadcn UI/ Socket.io ",
     },
     {
@@ -29,16 +29,12 @@ const projects = () => {
     },
   ];
   return (
-    <motion.div className="text-white p-4 w-full h-auto flex flex-col items-center gap-5">
+    <motion.div className="text-white p-4 w-full h-auto flex flex-col items-center gap-6">
       {projects.map((item, idx) => (
         <motion.div
-          initial={{ x: -50, opacity: 0, filter: "blur(8px)" }}
-          animate={{ x: 0, opacity: 1, filter: "blur(0px)" }}
-          transition={{ duration: 0.2, delay: idx * 0.2 }}
-          // whileHover={{
-          //   x: 8,
-          //   transition: { duration: 0.1, delay: 0 },
-          // }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: idx * 0.2 }}
           key={idx}
           className="w-full hover:translate-x-[5px] flex flex-col h-[20%] select-none transition-all duration-200"
         >

@@ -61,17 +61,9 @@ const MainComponent = () => {
           {tab === "projects" ? <Project /> : <Tools />}
           <div className="w-full h-12 mt-4 select-none flex justify-center items-end px-4 border-zinc-800">
             <p className="text-xs text-yellow-500/70 tracking-wide font-medium">
-                © {new Date().getFullYear()} Yash Bishnoi · Built with Next.js
+              Yash Bishnoi · Built with Next.js
             </p>
           </div>
-          {/* <div className="w-full h-12 mt-4 select-none flex justify-between items-end px-4 border-zinc-800">
-            <p className="text-xs text-yellow-500/70 tracking-wide font-medium">
-              Yash Bishnoi
-            </p>
-            <p className="text-xs text-yellow-500/70 tracking-wide font-medium">
-              Built with Next.js
-            </p>
-          </div> */}
         </div>
       </div>
     </motion.div>
