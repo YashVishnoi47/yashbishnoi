@@ -11,7 +11,7 @@ const projects = () => {
       githubLink:
         "https://github.com/YashVishnoi47/Collabrative-code-Editor-Restart",
       LiveLink: "https://collabrative-code-editor-restart.vercel.app/",
-      tech: "Nextjs/ React/ Next-Auth/ Tailwind CSS/ Shadcn UI/ Socket.io ",
+      tech: "Nextjs/ React/ Framer-Motion/ Next-Auth/ Tailwind CSS/ Shadcn UI/ Socket.io ",
     },
     {
       name: "Tools Bucket",
@@ -25,7 +25,7 @@ const projects = () => {
       disc: "This is my Portfolio",
       githubLink: "https://github.com/YashVishnoi47/yashbishnoi",
       LiveLink: "https://yashbishnoi.vercel.app/",
-      tech: "Nextjs/ React/ Tailwind CSS/ Shadcn UI",
+      tech: "Nextjs/ React/ Framer-Motion/ Tailwind CSS/ Shadcn UI",
     },
   ];
   return (
@@ -35,12 +35,12 @@ const projects = () => {
           initial={{ x: -50, opacity: 0, filter: "blur(8px)" }}
           animate={{ x: 0, opacity: 1, filter: "blur(0px)" }}
           transition={{ duration: 0.2, delay: idx * 0.2 }}
-          whileHover={{
-            x: 8,
-            transition: { duration: 0.1, delay: 0 },
-          }}
+          // whileHover={{
+          //   x: 8,
+          //   transition: { duration: 0.1, delay: 0 },
+          // }}
           key={idx}
-          className="w-full flex flex-col h-[20%] select-none transition-all duration-200"
+          className="w-full hover:translate-x-[5px] flex flex-col h-[20%] select-none transition-all duration-200"
         >
           {/* Project Name  and Links */}
           <div className="w-full mb-1 flex justify-between items-center h-[40%]">

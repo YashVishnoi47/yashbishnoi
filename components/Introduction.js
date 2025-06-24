@@ -28,7 +28,7 @@ const Introduction = ({ theme }) => {
       link: "https://www.instagram.com/yashss.realm/",
     },
     {
-      name: "X",
+      name: "Twitter",
       icon: (
         <FaXTwitter className="text-neutral-400 hover:text-yellow-500 transition-all duration-200 text-xl" />
       ),
