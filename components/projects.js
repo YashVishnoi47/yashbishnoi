@@ -1,37 +1,41 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import Link from "next/link";
 
 const projects = () => {
   const projects = [
     {
-      name: "Project",
-      disc: "This is a project made by me and I means me This is a project made.",
-      githubLink: "",
-      LiveLink: "",
-      tech: "Nextjs/ Tailwind CSS/ Shadcn UI/ Socket.io",
+      name: "Collabrative Code Editor",
+      disc: "A place where you can make projects with you team in real-time.",
+      githubLink:
+        "https://github.com/YashVishnoi47/Collabrative-code-Editor-Restart",
+      LiveLink: "https://collabrative-code-editor-restart.vercel.app/",
+      tech: "Nextjs/ React/ Next-Auth/ Tailwind CSS/ Shadcn UI/ Socket.io/ ",
     },
     {
-      name: "Project",
-      disc: "This is a project made by me and I means me This is a project made.",
-      githubLink: "",
+      name: "Tools Bucket",
+      disc: "A place where you have all the file converstion tools.",
+      githubLink: "https://github.com/YashVishnoi47/Tools-Bucket",
       LiveLink: "",
-      tech: "Nextjs/ Tailwind CSS/ Shadcn UI/ Socket.io",
+      tech: "Nextjs/ React/ Tailwind CSS/ Shadcn UI/",
+    },
+    {
+      name: "Portfolio",
+      disc: "This is my Portfolio",
+      githubLink: "https://github.com/YashVishnoi47/yashbishnoi",
+      LiveLink: "https://yashbishnoi.vercel.app/",
+      tech: "Nextjs/ Tailwind CSS/ Shadcn UI/",
     },
   ];
   return (
-    <motion.div
-      initial={{ y: 50, opacity: 0, filter: "blur(8px)" }}
-      animate={{ y: 0, opacity: 1, filter: "blur(0px)" }}
-      transition={{ duration: 0.8, delay: 0.2 }}
-      className="text-white p-4 w-full h-full flex flex-col justify-start items-center gap-4"
-    >
+    <motion.div className="text-white p-4 w-full h-full flex flex-col justify-start items-center gap-4">
       {projects.map((item, idx) => (
         <motion.div
-          initial={{ x:-50, opacity: 0, filter: "blur(8px)" }}
+          initial={{ x: -50, opacity: 0, filter: "blur(8px)" }}
           animate={{ x: 0, opacity: 1, filter: "blur(0px)" }}
-          transition={{ duration: 0.2 }}
-          whileHover={{ x: 5 }}
+          transition={{ duration: 0.2, delay: idx * 0.2 }}
+          whileHover={{ x: 5, delay: 0 }}
           key={idx}
           className="w-full flex flex-col h-[20%] border-neutral-700 select-none"
         >
@@ -40,10 +44,25 @@ const projects = () => {
             <h1 className="text-xl">{item.name}</h1>
             {/* Links */}
             <div className="w-1/2 h-full flex justify-end items-center">
-              <p className="flex justify-center items-center text-neutral-400 hover:text-white transition-all duration-200 ease-in-out gap-2 px-2 rounded-full cursor-pointer">
-                <span className="text-md">Live</span>
-                <FaExternalLinkAlt className="text-xs" />
-              </p>
+              {item.LiveLink && (
+                <Link
+                  target="_blank"
+                  href={item.LiveLink}
+                  className="flex justify-center items-center text-neutral-400 hover:text-white transition-all duration-200 ease-in-out gap-2 px-2 rounded-full cursor-pointer"
+                >
+                  <span className="text-md">Live</span>
+                  <FaExternalLinkAlt className="text-xs" />
+                </Link>
+              )}
+              {item.githubLink && (
+                <Link
+                  href={item.LiveLink}
+                  className="flex justify-center items-center text-neutral-400 hover:text-white transition-all duration-200 ease-in-out gap-2 px-2 rounded-full cursor-pointer"
+                >
+                  <span className="text-md">Github</span>
+                  <FaExternalLinkAlt className="text-xs" />
+                </Link>
+              )}
             </div>
           </div>
           {/* Disc  and Tech-Stack*/}

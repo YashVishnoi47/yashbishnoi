@@ -46,18 +46,13 @@ const Introduction = ({ theme }) => {
   ];
   return (
     <div className="w-full min-h-[35%] flex flex-col items-start justify-start p-4 mt-2">
-      <motion.div
+      {/* <motion.div
         style={{ scaleX }}
         className="fixed top-0 left-0 right-0 h-[1.5px] bg-yellow-500 origin-left z-50"
-      />
+      /> */}
 
       {/* Avatar, Name, and Location */}
-      <motion.div
-        initial={{ y: 50, opacity: 0, filter: "blur(8px)" }}
-        animate={{ y: 0, opacity: 1, filter: "blur(0px)" }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        className="w-full flex flex-col md:flex-row items-center md:items-center gap-4 px-4 py-3"
-      >
+      <motion.div className="w-full flex flex-col md:flex-row items-center md:items-center gap-4 px-4 py-3">
         {/* Profile Image */}
         <motion.div
           whileHover={{ rotateX: 10, rotateY: 10 }}
@@ -95,12 +90,7 @@ const Introduction = ({ theme }) => {
       </motion.div>
 
       {/* About Me */}
-      <motion.div
-        initial={{ y: 50, opacity: 0, filter: "blur(8px)" }}
-        animate={{ y: 0, opacity: 1, filter: "blur(0px)" }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        className="w-full flex flex-col md:items-start justify-start px-3 gap-3 mt-2"
-      >
+      <motion.div className="w-full flex flex-col md:items-start justify-start px-3 gap-3 mt-2">
         <p className="text-base md:text-xl text-neutral-200">
           <span>Full-Stack Web Developer from India. Open for work.</span>{" "}
           Learning Python and exploring AI. Currently building{" "}
@@ -111,7 +101,7 @@ const Introduction = ({ theme }) => {
         </p>
 
         {/* Social Links */}
-        <div className="flex items-center gap-4 text-lg text-neutral-400 mt-3">
+        <div className="flex items-center gap-4 text-lg text-neutral-400 md:mt-3">
           {socials.map((item) => (
             <Link
               key={item.name}
