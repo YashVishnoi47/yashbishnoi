@@ -95,7 +95,15 @@ const Introduction = ({ theme }) => {
           <span>Full-Stack Web Developer from India. Open for work.</span>{" "}
           Learning Python and exploring AI. Currently building{" "}
           <span className="font-medium underline cursor-pointer hover:text-yellow-600 transition">
-            <Link target="_blank" href={"https://snipppet.vercel.app/"}>Snipppet</Link>
+            <Link target="_blank" href={"https://snipppet.vercel.app/"}>
+              Snipppet
+            </Link>
+          </span>
+          {" "}and{" "}
+          <span className="font-medium underline cursor-pointer hover:text-yellow-600 transition">
+            <Link target="_blank" href={"https://organised-sandy.vercel.app/"}>
+              Organised
+            </Link>
           </span>
           .
         </p>

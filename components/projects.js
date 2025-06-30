@@ -14,6 +14,13 @@ const projects = () => {
       tech: "Nextjs/ React/ Framer-Motion/ Next-Auth/ Tailwind CSS/ Shadcn UI/ Socket.io ",
     },
     {
+      name: "Organised",
+      disc: "A minimalist web-app for organising your meetings.",
+      githubLink: "https://github.com/YashVishnoi47/organised.git",
+      LiveLink: "https://organised-sandy.vercel.app/",
+      tech: "Nextjs/ React/ Framer-Motion/ Tailwind CSS/ Shadcn UI/ React-day-picker",
+    },
+    {
       name: "Tools Bucket",
       disc: "A collection of handy tools for fast and secure file conversions.",
       githubLink: "https://github.com/YashVishnoi47/Tools-Bucket",
