@@ -14,10 +14,10 @@ const projects = () => {
       tech: "Nextjs/ React/ Framer-Motion/ Next-Auth/ Tailwind CSS/ Shadcn UI/ Socket.io ",
     },
     {
-      name: "Organised",
+      name: "OpenSchedule",
       disc: "A minimalist web-app for organising your meetings.",
-      githubLink: "https://github.com/YashVishnoi47/organised.git",
-      LiveLink: "https://organised-sandy.vercel.app/",
+      githubLink: "https://github.com/YashVishnoi47/Openschedule.git",
+      LiveLink: "https://openschedule.vercel.app/",
       tech: "Nextjs/ React/ Framer-Motion/ Tailwind CSS/ Shadcn UI/ React-day-picker",
     },
     {
