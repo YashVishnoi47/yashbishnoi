@@ -101,8 +101,8 @@ const Introduction = ({ theme }) => {
           </span>
           {" "}and{" "}
           <span className="font-medium underline cursor-pointer hover:text-yellow-600 transition">
-            <Link target="_blank" href={"https://organised-sandy.vercel.app/"}>
-              Organised
+            <Link target="_blank" href={"https://openschedule.vercel.app/"}>
+              OpenSchedule
             </Link>
           </span>
           .
