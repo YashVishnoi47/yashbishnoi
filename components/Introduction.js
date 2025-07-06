@@ -98,11 +98,11 @@ const Introduction = ({ theme }) => {
             <Link target="_blank" href={"https://snipppet.vercel.app/"}>
               Snipppet
             </Link>
-          </span>
-          {" "}and{" "}
+          </span>{" "}
+          and{" "}
           <span className="font-medium underline cursor-pointer hover:text-yellow-600 transition">
-            <Link target="_blank" href={"https://openschedule.vercel.app/"}>
-              OpenSchedule
+            <Link target="_blank" href={"https://wecanmeet.vercel.app/"}>
+              wecanmeet
             </Link>
           </span>
           .
