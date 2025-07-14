@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Introduction from "./Introduction";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
+import MessageBox from "./MessageBox";
 
 const Project = dynamic(() => import("./projects"));
 const Tools = dynamic(() => import("./Tools"));
@@ -15,10 +16,11 @@ const MainComponent = () => {
       initial={{ y: 50, opacity: 0, filter: "blur(8px)" }}
       animate={{ y: 0, opacity: 1, filter: "blur(0px)" }}
       transition={{ duration: 0.8, delay: 0.2 }}
-      className={`w-full h-full flex justify-center items-center ${
+      className={`w-full relative h-full flex justify-center items-center ${
         theme === "dark" ? "bg-[#0c0c04] text-white" : "bg-white text-black"
       }`}
     >
+      <MessageBox/>
       {/* Center Part */}
       <div
         className={`h-full w-full md:w-[80%] lg:w-[60%] xl:w-[40%] flex flex-col items-center ${

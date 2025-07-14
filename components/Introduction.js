@@ -4,7 +4,7 @@ import React from "react";
 import { FaGithub, FaInstagram } from "react-icons/fa";
 import { FaLocationDot, FaXTwitter } from "react-icons/fa6";
 import { SiGmail } from "react-icons/si";
-import { motion, useScroll, useSpring } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   Tooltip,
   TooltipContent,
@@ -12,13 +12,6 @@ import {
 } from "@/components/ui/tooltip";
 
 const Introduction = ({ theme }) => {
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001,
-  });
-
   const socials = [
     {
       name: "Instagram",
@@ -49,6 +42,8 @@ const Introduction = ({ theme }) => {
       link: "mailto:yashvishnoi309@gmail.com",
     },
   ];
+
+  
   return (
     <div className="w-full min-h-[37%] flex flex-col items-start justify-start p-4 mt-2">
       {/* Avatar, Name, and Location */}
