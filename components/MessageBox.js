@@ -45,7 +45,7 @@ const MessageBox = () => {
       {/* Floating trigger button in bottom-right corner */}
       <PopoverTrigger className="bg-white text-black rounded-xl hover:bg-[#B28401] hover:text-white active:scale-100 cursor-pointer shadow-md transition-all duration-200 ease-in-out flex justify-center items-center gap-4 text-sm px-4 py-1">
         <MdOutlineMessage className="text-sm" />
-        Lets's Talk
+        {` Lets's Talk`}
       </PopoverTrigger>
 
       {/* Popover content */}
