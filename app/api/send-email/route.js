@@ -6,8 +6,8 @@ export async function POST(req) {
     const { message, clientEmail } = await req.json();
 
     // Validate message
-    if (!message) {
-      return new Response(JSON.stringify({ message: "Message is required" }), {
+    if (!message || !clientEmail) {
+      return new Response(JSON.stringify({ message: "Message and email are required." }), {
         status: 400,
       });
     }

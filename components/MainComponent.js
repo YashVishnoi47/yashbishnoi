@@ -20,7 +20,8 @@ const MainComponent = () => {
         theme === "dark" ? "bg-[#0c0c04] text-white" : "bg-white text-black"
       }`}
     >
-      <MessageBox/>
+      {/* <MessageBox /> */}
+
       {/* Center Part */}
       <div
         className={`h-full w-full md:w-[80%] lg:w-[60%] xl:w-[40%] flex flex-col items-center ${

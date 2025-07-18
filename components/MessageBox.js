@@ -15,6 +15,7 @@ const MessageBox = () => {
   const [clientEmail, setClientEmail] = useState("");
   const [status, setStatus] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const handleSubmit = async (e) => {
     setLoading(true);
@@ -31,6 +32,10 @@ const MessageBox = () => {
       setStatus(true);
       setLoading(false);
     }
+    if (!res.ok) {
+      setLoading(false);
+      setError(data.message);
+    }
     setMessage("");
     setClientEmail("");
   };
@@ -38,8 +43,9 @@ const MessageBox = () => {
   return (
     <Popover>
       {/* Floating trigger button in bottom-right corner */}
-      <PopoverTrigger className="fixed z-50 bg-white text-black p-3 rounded-full right-6 bottom-6 hover:scale-110 active:scale-100 cursor-pointer shadow-md transition-all duration-200 ease-in-out">
-        <MdOutlineMessage className="text-xl" />
+      <PopoverTrigger className="bg-white text-black rounded-xl hover:bg-[#B28401] hover:text-white active:scale-100 cursor-pointer shadow-md transition-all duration-200 ease-in-out flex justify-center items-center gap-4 text-sm px-4 py-1">
+        <MdOutlineMessage className="text-sm" />
+        Lets's Talk
       </PopoverTrigger>
 
       {/* Popover content */}
@@ -59,6 +65,7 @@ const MessageBox = () => {
 
           <form onSubmit={handleSubmit}>
             {/* Email and message input */}
+            {error && <p className="text-red-500 pl-4 mb-1">{error}</p>}
             <div className="w-full flex flex-col gap-4 px-4">
               <Input
                 onChange={(e) => setClientEmail(e.target.value)}

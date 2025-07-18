@@ -53,6 +53,10 @@ const Tools = () => {
       name: "Socket.io",
       icon: "/tools/socketio.svg",
     },
+    {
+      name: "Python",
+      icon: "/tools/python.svg",
+    },
   ];
   return (
     <div className="w-full flex mt- flex-wrap items-center justify-center bg-transparent text-white  rounded-lg">

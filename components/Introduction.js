@@ -10,6 +10,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import MessageBox from "./MessageBox";
 
 const Introduction = ({ theme }) => {
   const socials = [
@@ -43,7 +44,6 @@ const Introduction = ({ theme }) => {
     },
   ];
 
-  
   return (
     <div className="w-full min-h-[37%] flex flex-col items-start justify-start p-4 mt-2">
       {/* Avatar, Name, and Location */}
@@ -123,6 +123,7 @@ const Introduction = ({ theme }) => {
               </TooltipContent>
             </Tooltip>
           ))}
+          <MessageBox />
         </div>
       </motion.div>
     </div>
